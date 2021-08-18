@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Greeting from "./Greeting";
+import Comment from "./Comment";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const comment ={
+        name : 'Andrey',
+        avatarUrl: 'https://source.unsplash.com/random',
+        text: 'это мой коммент',
+        date: '12-15-2021'
+    }
+    return (
+        <>
+            <Greeting name ='Андрей' age= '25' />
+            <Greeting name ='Матвей' age = '37' />
+            <Comment author ={comment} text ={comment.text} date ={comment.date}/>
+        </>
+    );
 }
 
-export default App;
+export default App
